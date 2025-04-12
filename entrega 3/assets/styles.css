@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #222;
+    padding: 1rem;
+  
+    .navbar {
+      display: flex;
+      justify-content: center;
+  
+      .nav-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .carousel-section {
+    margin-bottom: 2rem;
+  }
+  
+  main {
+    .bienvenida {
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      text-align: center;
+      background-color: #f8f9fa;
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        max-width: 600px;
+        margin-bottom: 1.5rem;
+      }
+  
+      .btn-servicios {
+        background-color: #ff5733;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+  
+        &:hover {
+          background-color: #e04a24;
+        }
+      }
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+  }
+  .sobre-nosotros {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 1.5rem;
+  
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff5733;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+  }
+  .servicios {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fffaf5;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #ff5733;
+    }
+  
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  
+    .servicio {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+  
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .menu {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fffdf9;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: #ff5733;
+      margin-bottom: 2rem;
+    }
+  
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  
+    .menu-item {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+  
+      img {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+  
+      h2 {
+        font-size: 1.4rem;
+        color: #333;
+        margin: 0.5rem 0;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+  
+      .precio {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ff5733;
+      }
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .contacto {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ff5733;
+    }
+  
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+  
+    .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: left;
+  
+      .form-group {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+  
+        input,
+        textarea {
+          padding: 0.75rem;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+  
+          &:focus {
+            border-color: #ff5733;
+            outline: none;
+          }
+        }
+      }
+  
+      button {
+        align-self: flex-start;
+        background-color: #ff5733;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #e64a2e;
+        }
+      }
+    }
+  }
+  

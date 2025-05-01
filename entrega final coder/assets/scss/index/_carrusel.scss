@@ -1,0 +1,14 @@
+@use '../abstracts/variables';
+
+// Carrusel de la página principal (index)
+.carousel-section {
+  margin-bottom: 2rem;
+
+  @media (max-width: variables.$tablet-breakpoint) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: variables.$mobile-breakpoint) {
+    margin-bottom: 1rem;
+  }
+}

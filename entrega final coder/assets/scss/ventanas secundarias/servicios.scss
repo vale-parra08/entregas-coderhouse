@@ -1,0 +1,55 @@
+// Estilos para servicios
+
+// Variables 
+@use '../abstracts/variables';
+
+.servicio {
+  background-color: variables.$color-fondo-servicio;
+  padding: variables.$espaciado;
+  border-radius: variables.$radio-borde;
+  box-shadow: variables.$sombra-suave;
+  transition: transform 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: variables.$color-hover;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: variables.$color-texto;
+  }
+
+  // Media query para tablet
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 1.2rem;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  // Media query para móvil
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

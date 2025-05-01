@@ -1,0 +1,106 @@
+// Estilos del main 
+@use '../abstracts/variables';
+
+// Estilos del main
+main {
+  .bienvenida {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: variables.$background-light;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-servicios {
+      background-color: variables.$primary-color;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        background-color: variables.$hover-color;
+      }
+    }
+
+    // Media Queries
+    @media (max-width: variables.$tablet-breakpoint) {
+      padding: 1.5rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: variables.$mobile-breakpoint) {
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .btn-servicios {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+// Estilos de cards
+.feature-card {
+  border: 1px solid variables.$border-color;
+  border-radius: variables.$border-radius;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+
+  @media (max-width: variables.$tablet-breakpoint) {
+    padding: 16px;
+    margin: 8px;
+  }
+
+  @media (max-width: variables.$mobile-breakpoint) {
+    padding: 12px;
+    margin: 6px;
+    font-size: 0.95rem;
+  }
+}
+
+.testimonial {
+  background-color: variables.$background-light;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: variables.$border-radius;
+
+  // Media query para tablets
+  @media (max-width: variables.$tablet-breakpoint) {
+    padding: 16px;
+    margin: 12px 0;
+  }
+
+  // Media query para móvil
+  @media (max-width: variables.$mobile-breakpoint) {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+  }
+}

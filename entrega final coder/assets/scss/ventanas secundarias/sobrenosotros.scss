@@ -1,0 +1,54 @@
+// Variables
+@use '../abstracts/variables';
+
+// Estilos de la sección "Sobre Nosotros"
+.sobre-nosotros {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: variables.$background-color;
+  border-radius: variables.$border-radius;
+  box-shadow: 0 4px 10px variables.$shadow-color;
+  display: grid;
+  gap: 1.5rem;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: variables.$primary-color;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: variables.$text-color;
+  }
+
+  // Tablet
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // Móvil
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+  }
+}
+

@@ -1,0 +1,72 @@
+//menu superior
+// Variables
+@use '../scss/abstracts/variables';
+
+// Estilos generales para el encabezado
+header {
+  background-color: variables.$background-color-header;
+  padding: 1rem;
+  width: 100%;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: variables.$max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    // Lista de navegación
+    .nav-list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      // Elementos de la lista
+      li {
+        a {
+          color: variables.$font-color-light;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+      
+          &:hover {
+            text-decoration: underline;
+            color: variables.$hover-color;
+          }
+        }
+      }
+    }
+  }
+  
+  // Media query para tabletas (600px a 1024px)
+  @media (max-width: 1024px) and (min-width: 600px) {
+    .navbar {
+      flex-direction: column; // Apila los elementos verticalmente en tabletas
+      align-items: flex-start; // Alineación a la izquierda
+    
+      .nav-list {
+        flex-direction: row; // Mantener los elementos en fila para mejor vista en tabletas
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  // Media query para pantallas pequeñas (móviles)
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; // Apila los elementos verticalmente
+      align-items: flex-start; // Alineación a la izquierda
+    
+      .nav-list {
+        flex-direction: column; // Cambia la dirección de la lista a columna
+        gap: 1rem;
+      }
+    }
+  }
+
+  
+}

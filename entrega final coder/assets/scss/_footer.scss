@@ -1,0 +1,50 @@
+// pie de pagina 
+// Variables 
+@use '../scss/abstracts/variables';
+
+// Estilos del pie de página
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: variables.$footer-bg-color;
+  color: variables.$footer-text-color;
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      color: variables.$footer-text-color;
+      font-size: variables.$social-icon-size;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: darken(variables.$footer-text-color, 10%);
+      }
+    }
+  }
+
+  // Media query para tablets
+  @media (max-width: variables.$tablet-breakpoint) {
+    .social-icons {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+  }
+
+  // Media query para móviles
+  @media (max-width: variables.$mobile-breakpoint) {
+    padding: 0.75rem;
+
+    .social-icons {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

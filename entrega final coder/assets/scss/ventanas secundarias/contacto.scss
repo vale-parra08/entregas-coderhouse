@@ -1,0 +1,123 @@
+//preguntas 
+//variables
+@use '../abstracts/variables';
+
+// Estilos para la sección de contacto/preguntas
+.contacto {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: variables.$background-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: variables.$primary-color;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border: 1px solid variables.$input-border-color;
+        border-radius: variables.$button-border-radius;
+        font-size: 1rem;
+
+        &:focus {
+          border-color: variables.$focus-border-color;
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      align-self: flex-start;
+      background-color: variables.$primary-color;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: variables.$button-border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: variables.$secondary-color;
+      }
+    }
+  }
+
+  // Media Query: Tablet
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .formulario {
+      gap: 1rem;
+
+      button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  // Media Query: Móvil
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .formulario {
+      .form-group {
+        label {
+          font-size: 0.95rem;
+        }
+
+        input,
+        textarea {
+          font-size: 0.95rem;
+          padding: 0.6rem;
+        }
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+    }
+  }
+}

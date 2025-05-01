@@ -1,0 +1,27 @@
+//vaeiables 
+
+@use '../scss/abstracts/variables';
+
+// general de todas laspaginas
+@use 'header'; //menu superior
+@use 'footer'; //pie de pagina
+
+//index
+@use 'index/carrusel';//carrusel de la pagina principal
+@use'index/main';//estilo del texto de la pagina principal o index
+@use 'index/partfinaldelindex';//texto de la parte baja de la pagina principal
+
+//servicios
+@use 'ventanas secundarias/servicios.scss';// estilos de la ventana servicios
+
+//menu
+@use 'ventanas secundarias/menu.scss'; //estilos de la ventana menu
+
+//sobre nosotros
+@use 'ventanas secundarias/sobrenosotros.scss';// estilos de la ventana sobre nosotros
+
+//contacto
+@use 'ventanas secundarias/contacto.scss'//estilos de la ventana preguntas
+
+
+

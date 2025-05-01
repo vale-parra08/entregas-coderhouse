@@ -1,0 +1,42 @@
+// Estilo para la parte inferior del index
+@use '../abstracts/variables';
+
+.feature-card {
+  border: 1px solid variables.$border-color;
+  border-radius: variables.$border-radius;
+  padding: variables.$padding-default;
+  margin: variables.$margin-default;
+  text-align: center;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 16px;
+    margin: 8px;
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 12px;
+    margin: 6px;
+    font-size: 0.95rem;
+  }
+}
+
+.testimonial {
+  background-color: variables.$background-testimonial;
+  padding: variables.$padding-default;
+  margin: 15px 0;
+  border-radius: variables.$border-radius;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    padding: 16px;
+    margin: 12px 0;
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+  }
+}
+
+
+  
